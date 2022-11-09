@@ -1,0 +1,61 @@
+﻿@page
+@model Metata.Pages.convert.imgtobase64Model
+@{
+    ViewData["Title"] = "Image To Base54";
+}
+
+    
+    <div class="container">
+        <div class="pricing6 py-5 bg-light">
+  <div class="container"> 
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <h3 class="mb-3">Image to Base64</h3>
+        <h6 class="subtitle font-weight-normal">Image to Base64 decoder Online helps to convert Image to Base64 String.</h6>
+      </div>
+    </div>
+    <!-- row  -->
+    <div class="row mt-4">
+      <!-- column  -->
+      <div class="col-md-12">
+        <div class="card card-shadow border-0 mb-4">
+          <div class="card-body p-4">
+            <div style="margin: 24px">
+                <h2>Upload Image</h2>
+            </div>
+
+            <div style="margin: 16px; padding: 16px">
+                <input
+                    class="form-control form-control-lg"
+                    id="selectAvatar"
+                    type="file"
+                />
+            </div>
+            <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h6>Image Preview:</h6>
+                    <img class="img" id="avatar" />
+                </div>
+                <div class="col">
+                    <h6>Base64 Output</h6>
+                    <textarea id="textArea" rows="30" cols="50"></textarea>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- column  -->
+    </div>
+  </div>
+</div>
+    </div>
+
+
+
+@section Scripts{
+    <environment>
+        <script src="~/js/convert/imgtobase64.js"></script>
+    </environment>
+}
