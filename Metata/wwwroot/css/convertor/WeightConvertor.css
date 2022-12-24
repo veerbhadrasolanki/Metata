@@ -1,0 +1,12 @@
+﻿.weight {
+    margin-bottom: 10%;
+    width: 100% !important;
+    height: 0px;
+}
+
+
+body {
+    margin-top: 70px;
+    background: #333;
+    color: #fff;
+}

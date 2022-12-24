@@ -1,0 +1,29 @@
+﻿.img-pre {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    width: 100% !important;
+    height: 450px !important;
+}
+
+.form-control {
+    margin-bottom: 10%;
+    width: 100% !important;
+    height: 371px;
+}
+
+.heading {
+    float: left;
+}
+
+
+.wrapper-card {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.card-convert {
+    min-width: 70%;
+}
