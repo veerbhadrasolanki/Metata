@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="ml-10 pt-5 flex">
+    <div style="background-color:#e80936; border-radius:25%;" class="flex flex-col items-center justify-center w-10 h-10 mr-4">
+        <a href="/ImageTools/SolidGenerator" class="relative block">
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" />
+</svg>
+        </a>
+    </div>
+    <a href="/ImageTools/SolidGenerator">
+        <div class="site-title font-bold  flex-col">Solid Color Generator</div>
+    </a>
+</div>
+<div class="container-fluid pt-5 pl-5 pr-5">
+    <div class="wrapper">
+        <div class="container-sidebar">
+            <div>
+                <nav>
+                    <ul>
+                        <li><a class="list-a" href="/dev/">Dev Tools</a></li>
+                        <li><a class="list-a" href="/math/">Math Tools</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container-content">
+            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 lg:h-2/4 gap-y-1 justify-items-stretch items-center mx-auto bg-white rounded-lg shadow dark:bg-gray-800">
+                <div id="randomColor" class=" gap-px flex flex-col w-5/6 h-5/6 mx-auto container-option" for="bgcolor" style="background-color:#538f15;">
+                </div>
+                <div class=" gap-px	 flex flex-col  w-5/6 mx-auto">
+                    <div class="color">
+                        <input type="color" id="bgcolor" value="#538f15" onchange="test(this)" />
+                    </div>
+
+
+                    <div class="resultone">
+                        <textarea class="codeone" id="lcolorcode" placeholder="#538f15" readonly>#538f15</textarea>
+                        <button class="randomone" onclick="generaterandom()">Generate Random</button>
+                        <button class="copyone" onclick="copycmd()">Copy</button>
+                        <button type="button" class="ss" style="background-color: #0077cc;">Download</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

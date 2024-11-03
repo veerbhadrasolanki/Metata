@@ -1,0 +1,87 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="ml-10 pt-5 flex">
+    <div style="background-color:#f2e33e; border-radius:25%;" class="flex flex-col items-center justify-center w-10 h-10 mr-4">
+        <a href="/UnitConvertorTools/TemperatureConvertor" class="relative block">
+            <svg xmlns="http://www.w3.org/2000/svg" style="color:#fff;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+            </svg>
+        </a>
+    </div>
+    <a href="/UnitConvertorTools/TemperatureConvertor">
+        <div class="site-title font-bold  flex-col">Temperature Convertor</div>
+    </a>
+</div>
+<div class="container-fluid pt-5 pl-5 pr-5">
+    <div class="wrapper">
+        <div class="container-sidebar">
+            <div>
+                <nav>
+                    <ul>
+                        <li><a class="list-a" href="/dev/">Dev Tools</a></li>
+                        <li><a class="list-a" href="/math/">Math Tools</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container-content">
+            <div  class="converter-row grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 lg:h-2/4 gap-y-1 justify-items-stretch items-center mx-auto bg-white rounded-lg shadow dark:bg-gray-800">
+                <div class=" gap-px	 flex flex-col  w-5/6 mx-auto">
+                    <label>Fahrenheit</label>
+                    <input type="number"  class="inputs" id="fahrenheit">
+                    @*<label><input id="c" oninput="convert('C')" type='number' max='140' min='-51' value='23'> ℃</label>*@
+                    <br>
+                    <label>Celsius</label>
+                    <input type="number"  class="inputs" id="celsius">
+                    @*                    <label><input id="f" oninput="convert('F')" type='number' max='290' min='-60' value='75'> ℉</label>
+                    *@                    <br>
+                    <label>Kelvin</label>
+                    <input type="number"  class="inputs" id="kelvin">
+                    @*                    <label><input id="k" oninput="convert('K')" type='number' max='290' min='-60' value='75'> K</label>
+                    *@
+                </div>
+               @* <div class=" gap-px	 flex flex-col  w-5/6 mx-auto">
+                    <div class="pass-length">
+                        <meter id='thermo' max='140' high='99' low='1' min='-55' value='23' optimum='23' class='comfortable'></meter>
+                    </div>
+                </div>*@
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    let celsius = document.getElementById('celsius');
+    let fahrenheit = document.getElementById('fahrenheit');
+    let kelvin = document.getElementById('kelvin');
+    celsius.oninput = function() {
+        let f = (parseFloat(celsius.value) * 9) / 5 + 32;
+        fahrenheit.value = parseFloat(f.toFixed(2));
+
+        let k = (parseFloat(celsius.value) + 273.15);
+        kelvin.value = parseFloat(k.toFixed(2));
+    }
+    fahrenheit.oninput = function() {
+        let c = ((parseFloat(
+            fahrenheit.value) - 32) * 5) / 9;
+        celsius.value = parseFloat(c.toFixed(2));
+
+        let k = (parseFloat(
+            fahrenheit.value) - 32) * 5 / 9 + 273.15;
+        kelvin.value = parseFloat(k.toFixed(2));
+    }
+    kelvin.oninput = function() {
+        let f = (parseFloat(
+            kelvin.value) - 273.15) * 9 / 5 + 32;
+        fahrenheit.value = parseFloat(f.toFixed(2));
+
+        let c = (parseFloat(kelvin.value) - 273.15);
+        celsius.value = parseFloat(c.toFixed(2));
+    }
+</script>

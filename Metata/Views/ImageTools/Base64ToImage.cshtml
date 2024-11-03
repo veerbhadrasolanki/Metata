@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="ml-10 pt-5 flex">
+    <div style="background-color:#c74436; border-radius:25%;" class="flex flex-col items-center justify-center w-10 h-10 mr-4">
+        <a href="/ImageTools/Base64ToImage" class="relative block">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+</svg>
+        </a>
+    </div>
+    <a href="/ImageTools/Base64ToImage">
+        <div class="site-title font-bold  flex-col">Base64 To Image Decoder</div>
+    </a>
+</div>
+<div class="container-fluid pt-5 pl-5 pr-5">
+    <div class="wrapper">
+        <div class="container-sidebar">
+            <div>
+                <nav>
+                    <ul>
+                        <li><a class="list-a" href="/dev/">Dev Tools</a></li>
+                        <li><a class="list-a" href="/math/">Math Tools</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container-content">
+            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 lg:h-2/4 gap-y-1 justify-items-stretch items-center mx-auto bg-white rounded-lg shadow dark:bg-gray-800">
+                <div class=" gap-px	 flex flex-col  w-5/6 mx-auto"> 
+                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Base64 Encoding</label>
+                        <textarea id="base641" onpaste = "onafterpaste(myFunction,this)" rows="10" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Paste Your Base64 Encoding here..."></textarea>
+                </div>
+                <div class=" gap-px	 flex flex-col  w-5/6 mx-auto">
+                    
+<img  id="image" class="max-h-96 w-full h-auto max-w-96 rounded-lg" alt="image description">
+
+                 @*   <label for="image" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                        <svg aria-hidden="true"  class="w-10 h-10 mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                        <img class="img-pre" alt='Paste Base64 in Left Box' id="image" />
+                    </label>*@
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,426 @@
+﻿@{
+    ViewData["Title"] = "Tools";
+}
+
+<div class="w-full bg-gray-50">
+    <header aria-label="Page Header">
+        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+
+            <div class="mt-8">
+                <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">
+                    Welcome To Metata Online Tool!
+                </h1>
+
+                <p class="mt-1.5 text-sm text-gray-500">
+                    Your work done gets faster with Metata. 🚀
+                </p>
+            </div>
+        </div>
+    </header>
+</div>
+
+
+<div class="container-fluid pt-5 pl-5 pr-5">
+    <div class="wrapper">
+        <div class="container-sidebar">
+            <div>
+                <nav>
+                    <ul>
+                        <li><a class="list-a" href="/dev/">Dev Tools</a></li>
+                        <li><a class="list-a" href="/math/">Math Tools</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container-content">
+            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-y-4 justify-items-stretch">
+
+                <div class=" gap-px	 flex flex-col  w-5/6	 items-center mx-auto bg-white rounded-lg shadow dark:bg-gray-800">
+                    <div class="w-full px-4 py-5 border-b sm:px-6">
+                        <h3 class="text-lg font-medium leading-6 text-gray-900 dark:text-white">
+                            Image Tools
+                        </h3>
+                        <p class="max-w-2xl mt-1 text-sm text-gray-500 dark:text-gray-200">
+                            Tools which are used to convert image into pdf,jpeg,img,etc.
+                        </p>
+                    </div>
+                    <ul class="flex flex-col divide-y divide">
+                        <li class="flex flex-row">
+                            <div onclick="myhref('/ImageTools/ImageToBase64');" class="flex items-center flex-1 p-4 cursor-pointer select-none">
+                                <div style="background-color:#368ac7; border-radius:25%;" class="flex flex-col items-center justify-center w-10 h-10 mr-4">
+                                    <a href="/ImageTools/ImageToBase64" class="relative block">
+                                        @*<img alt="profil" class="mx-auto object-cover rounded-full h-10 w-10 " />*@
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" style="color:#fff;" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                                        </svg>
+
+                                        @*<ion-icon style="color:#fff;" name="images-outline" class="mx-auto object-cover rounded-full h-8 w-8 "></ion-icon>*@
+                                    </a>
+                                </div>
+                                <div class="flex-1 pl-1 mr-16">
+                                    <div class="font-medium dark:text-white">
+                                        Image to Base64
+                                    </div>
+                                    <div class="text-sm text-gray-600 dark:text-gray-200">
+                                        Used to convert image into base64 url.
+                                    </div>
+                                </div>
+                                <button href="/ImageTools/ImageToBase64" class="flex justify-end w-10 text-right">
+                                    <svg width="20" fill="currentColor" height="20" class="text-gray-500 hover:text-gray-800 dark:hover:text-white dark:text-gray-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex flex-row">
+                            <div onclick="myhref('/ImageTools/Base64ToImage');" class="flex items-center flex-1 p-4 cursor-pointer select-none">
+                                <div style="background-color:#c74436; border-radius:25%;" class="flex flex-col items-center justify-center w-10 h-10 mr-4">
+                                    <a href="/ImageTools/Base64ToImage" class="relative block">
+                                        @*<img alt="profil" src="/images/person/10.jpg"  />*@
+                                        @*<ion-icon style="color:#fff;" name="link-outline" class="mx-auto object-cover rounded-full h-10 w-10"></ion-icon>*@
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="color:#fff;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+                                        </svg>
+
+                                    </a>
+                                </div>
+                                <div class="flex-1 pl-1 mr-16">
+                                    <div class="font-medium dark:text-white">
+                                        Base64 To Image
+                                    </div>
+                                    <div class="text-sm text-gray-600 dark:text-gray-200">
+                                        Used to convert base64 url into image.
+                                    </div>
+                                </div>
+                                <button href="/ImageTools/Base64ToImage" class="flex justify-end w-10 text-right">
+                                    <svg width="20" fill="currentColor" height="20" class="text-gray-500 hover:text-gray-800 dark:hover:text-white dark:text-gray-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex flex-row">
+                            <div onclick="myhref('/ImageTools/GradientGenerator');" class="flex items-center flex-1 p-4 cursor-pointer select-none">
+                                <div style="background-color:#15b02a; border-radius:25%;" class="flex flex-col items-center justify-center w-10 h-10 mr-4">
+                                    <a href="/ImageTools/GradientGenerator" class="relative block">
+                                        @*<img alt="profil" src="/images/person/3.jpg" />*@
+                                        @*<ion-icon style="color:#fff;" name="color-palette-outline" class="mx-auto object-cover rounded-full h-10 w-10"></ion-icon>*@
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="color:#fff;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+                                        </svg>
+
+                                    </a>
+                                </div>
+                                <div class="flex-1 pl-1 mr-16">
+                                    <div class="font-medium dark:text-white">
+                                        Gradient Color Generator
+                                    </div>
+                                    <div class="text-sm text-gray-600 dark:text-gray-200">
+                                        Generate Linear CSS code and Background Images with custom configuration options
+                                    </div>
+                                </div>
+                                <button class="flex justify-end w-10 text-right">
+                                    <svg width="20" fill="currentColor" height="20" class="text-gray-500 hover:text-gray-800 dark:hover:text-white dark:text-gray-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex flex-row">
+                            <div onclick="myhref('/ImageTools/SolidGenerator');" class="flex items-center flex-1 p-4 cursor-pointer select-none">
+                                <div style="background-color:#e80936; border-radius:25%;" class="flex flex-col items-center justify-center w-10 h-10 mr-4">
+                                    <a href="/ImageTools/SolidGenerator" class="relative block">
+                                        @*<img alt="profil" src="/images/person/7.jpg" />*@
+                                        @*<ion-icon name="color-fill-outline" style="color:#fff;" class="mx-auto object-cover rounded-full h-10 w-10"></ion-icon>*@
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="color:#fff;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" />
+                                        </svg>
+
+                                    </a>
+                                </div>
+                                <div class="flex-1 pl-1 mr-16">
+                                    <div class="font-medium dark:text-white">
+                                        Solid Color Generator
+                                    </div>
+                                    <div class="text-sm text-gray-600 dark:text-gray-200">
+                                        Generate single solid color image as JPG or PNG files.
+                                    </div>
+                                </div>
+                                <button class="flex justify-end w-10 text-right">
+                                    <svg width="20" fill="currentColor" height="20" class="text-gray-500 hover:text-gray-800 dark:hover:text-white dark:text-gray-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="gap-px	flex flex-col  w-5/6	 items-center mx-auto bg-white rounded-lg shadow dark:bg-gray-800">
+                    <div class="w-full px-4 py-5 border-b sm:px-6">
+                        <h3 class="text-lg font-medium leading-6 text-gray-900 dark:text-white">
+                            Security Tools
+                        </h3>
+                        <p class="max-w-2xl mt-1 text-sm text-gray-500 dark:text-gray-200">
+                            Details and informations about user.
+                        </p>
+                    </div>
+                    <ul class="flex flex-col divide-y divide">
+                        <li class="flex flex-row">
+                            <div onclick="myhref('/SecurityTools/SecurePasswordGenerator');" class="flex items-center flex-1 p-4 cursor-pointer select-none">
+                                <div style="background-color:#b5460e; border-radius:25%;" class="flex flex-col items-center justify-center w-10 h-10 mr-4">
+                                    <a href="/SecurityTools/SecurePasswordGenerator" class="relative block">
+                                        @*<img alt="profil" class="mx-auto object-cover rounded-full h-10 w-10 " />*@
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="color:#fff;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                                        </svg>
+
+
+                                        @*<ion-icon style="color:#fff;" name="images-outline" class="mx-auto object-cover rounded-full h-8 w-8 "></ion-icon>*@
+                                    </a>
+                                </div>
+                                <div class="flex-1 pl-1 mr-16">
+                                    <div class="font-medium dark:text-white">
+                                        Secure Password Generator
+                                    </div>
+                                    <div class="text-sm text-gray-600 dark:text-gray-200">
+                                        Generate secure passwords with alphanumeric and special characters.
+                                    </div>
+                                </div>
+                                <button href="/SecurityTools/SecurePasswordGenerator" class="flex justify-end w-10 text-right">
+                                    <svg width="20" fill="currentColor" height="20" class="text-gray-500 hover:text-gray-800 dark:hover:text-white dark:text-gray-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex flex-row">
+                            <div onclick="myhref('/SecurityTools/RandomPasswordGenerator');" class="flex items-center flex-1 p-4 cursor-pointer select-none">
+                                <div style="background-color:#23afa8; border-radius:25%;" class="flex flex-col items-center justify-center w-10 h-10 mr-4">
+                                    <a href="/SecurityTools/RandomPasswordGenerator" class="relative block">
+                                        @*<img alt="profil" class="mx-auto object-cover rounded-full h-10 w-10 " />*@
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="color:#fff;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                                        </svg>
+
+
+                                        @*<ion-icon style="color:#fff;" name="images-outline" class="mx-auto object-cover rounded-full h-8 w-8 "></ion-icon>*@
+                                    </a>
+                                </div>
+                                <div class="flex-1 pl-1 mr-16">
+                                    <div class="font-medium dark:text-white">
+                                        Random Password Generator
+                                    </div>
+                                    <div class="text-sm text-gray-600 dark:text-gray-200">
+                                        Generate secure passwords with alphanumeric and special characters.
+                                    </div>
+                                </div>
+                                <button href="/SecurityTools/RandomPasswordGenerator" class="flex justify-end w-10 text-right">
+                                    <svg width="20" fill="currentColor" height="20" class="text-gray-500 hover:text-gray-800 dark:hover:text-white dark:text-gray-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex flex-row">
+                            <div onclick="myhref('/SecurityTools/MD5PasswordGenerator');" class="flex items-center flex-1 p-4 cursor-pointer select-none">
+                                <div style="background-color:#5527b2; border-radius:25%;" class="flex flex-col items-center justify-center w-10 h-10 mr-4">
+                                    <a href="/SecurityTools/MD5PasswordGenerator" class="relative block">
+                                        @*<img alt="profil" class="mx-auto object-cover rounded-full h-10 w-10 " />*@
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="color:#fff;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
+                                        </svg>
+
+
+                                        @*<ion-icon style="color:#fff;" name="images-outline" class="mx-auto object-cover rounded-full h-8 w-8 "></ion-icon>*@
+                                    </a>
+                                </div>
+                                <div class="flex-1 pl-1 mr-16">
+                                    <div class="font-medium dark:text-white">
+                                        MD5 Password Generator
+                                    </div>
+                                    <div class="text-sm text-gray-600 dark:text-gray-200">
+                                        Generate secure passwords with alphanumeric and special characters.
+                                    </div>
+                                </div>
+                                <button href="/SecurityTools/MD5PasswordGenerator" class="flex justify-end w-10 text-right">
+                                    <svg width="20" fill="currentColor" height="20" class="text-gray-500 hover:text-gray-800 dark:hover:text-white dark:text-gray-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex flex-row">
+                            <div onclick="myhref('/SecurityTools/SHAPasswordGenerator');" class="flex items-center flex-1 p-4 cursor-pointer select-none">
+                                <div style="background-color:#4adba1; border-radius:25%;" class="flex flex-col items-center justify-center w-10 h-10 mr-4">
+                                    <a href="/SecurityTools/SHAPasswordGenerator" class="relative block">
+                                        @*<img alt="profil" class="mx-auto object-cover rounded-full h-10 w-10 " />*@
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="color:#fff;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
+                                        </svg>
+
+
+                                        @*<ion-icon style="color:#fff;" name="images-outline" class="mx-auto object-cover rounded-full h-8 w-8 "></ion-icon>*@
+                                    </a>
+                                </div>
+                                <div class="flex-1 pl-1 mr-16">
+                                    <div class="font-medium dark:text-white">
+                                        SHA Password Generator
+                                    </div>
+                                    <div class="text-sm text-gray-600 dark:text-gray-200">
+                                        Generate secure passwords with alphanumeric and special characters.
+                                    </div>
+                                </div>
+                                <button href="/SecurityTools/SHAPasswordGenerator" class="flex justify-end w-10 text-right">
+                                    <svg width="20" fill="currentColor" height="20" class="text-gray-500 hover:text-gray-800 dark:hover:text-white dark:text-gray-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="gap-px justify-items-stretch w-5/6	flex flex-col items-center mx-auto bg-white rounded-lg shadow dark:bg-gray-800">
+                    <div class="w-full px-4 py-5 border-b sm:px-6">
+                        <h3 class="text-lg font-medium leading-6 text-gray-900 dark:text-white">
+                            Unit Convertor
+                        </h3>
+                        <p class="max-w-2xl mt-1 text-sm text-gray-500 dark:text-gray-200">
+                            Details and informations about user.
+                        </p>
+                    </div>
+                    <ul class="flex flex-col divide-y divide">
+                        <li class="flex flex-row">
+                            <div onclick="myhref('/ConvertorTools/TemperatureConvertor');" class="flex items-center flex-1 p-4 cursor-pointer select-none">
+                                <div style="background-color:#f2e33e; border-radius:25%;" class="flex flex-col items-center justify-center w-10 h-10 mr-4">
+                                    <a href="/UnitConvertorTools/TemperatureConvertor" class="relative block">
+                                        @*<img alt="profil" class="mx-auto object-cover rounded-full h-10 w-10 " />*@
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="color:#fff;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+                                        </svg>
+
+
+
+                                        @*<ion-icon style="color:#fff;" name="images-outline" class="mx-auto object-cover rounded-full h-8 w-8 "></ion-icon>*@
+                                    </a>
+                                </div>
+                                <div class="flex-1 pl-1 mr-16">
+                                    <div class="font-medium dark:text-white">
+                                        Temperature Convertor
+                                    </div>
+                                    <div class="text-sm text-gray-600 dark:text-gray-200">
+                                        Generate secure passwords with alphanumeric and special characters.
+                                    </div>
+                                </div>
+                                <button href="/ConvertorTools/TemperatureConvertor" class="flex justify-end w-10 text-right">
+                                    <svg width="20" fill="currentColor" height="20" class="text-gray-500 hover:text-gray-800 dark:hover:text-white dark:text-gray-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex flex-row">
+                            <div onclick="myhref('/ConvertorTools/UnixTimeConvertor');" class="flex items-center flex-1 p-4 cursor-pointer select-none">
+                                <div style="background-color:#123dbc; border-radius:25%;" class="flex flex-col items-center justify-center w-10 h-10 mr-4">
+                                    <a href="/ConvertorTools/UnixTimeConvertor" class="relative block">
+                                        @*<img alt="profil" class="mx-auto object-cover rounded-full h-10 w-10 " />*@
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="color:#fff;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+
+
+
+                                        @*<ion-icon style="color:#fff;" name="images-outline" class="mx-auto object-cover rounded-full h-8 w-8 "></ion-icon>*@
+                                    </a>
+                                </div>
+                                <div class="flex-1 pl-1 mr-16">
+                                    <div class="font-medium dark:text-white">
+                                        Unix Time Convertor
+                                    </div>
+                                    <div class="text-sm text-gray-600 dark:text-gray-200">
+                                        Generate secure passwords with alphanumeric and special characters.
+                                    </div>
+                                </div>
+                                <button href="/ConvertorTools/UnixTimeConvertor" class="flex justify-end w-10 text-right">
+                                    <svg width="20" fill="currentColor" height="20" class="text-gray-500 hover:text-gray-800 dark:hover:text-white dark:text-gray-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex flex-row">
+                            <div onclick="myhref('/ConvertorTools/UnixTimeConvertor');" class="flex items-center flex-1 p-4 cursor-pointer select-none">
+                                <div style="background-color:#123dbc; border-radius:25%;" class="flex flex-col items-center justify-center w-10 h-10 mr-4">
+                                    <a href="/UnitConvertorTools/UnixTimeConvertor" class="relative block">
+                                        @*<img alt="profil" class="mx-auto object-cover rounded-full h-10 w-10 " />*@
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="color:#fff;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+
+
+
+                                        @*<ion-icon style="color:#fff;" name="images-outline" class="mx-auto object-cover rounded-full h-8 w-8 "></ion-icon>*@
+                                    </a>
+                                </div>
+                                <div class="flex-1 pl-1 mr-16">
+                                    <div class="font-medium dark:text-white">
+                                        Unix Time Convertor
+                                    </div>
+                                    <div class="text-sm text-gray-600 dark:text-gray-200">
+                                        Generate secure passwords with alphanumeric and special characters.
+                                    </div>
+                                </div>
+                                <button href="/ConvertorTools/UnixTimeConvertor" class="flex justify-end w-10 text-right">
+                                    <svg width="20" fill="currentColor" height="20" class="text-gray-500 hover:text-gray-800 dark:hover:text-white dark:text-gray-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="flex flex-row">
+                            <div class="flex items-center flex-1 p-4 cursor-pointer select-none">
+                                <div class="flex flex-col items-center justify-center w-10 h-10 mr-4">
+                                    <a href="#" class="relative block">
+                                        <img alt="profil" src="/images/person/7.jpg" class="mx-auto object-cover rounded-full h-10 w-10 " />
+                                    </a>
+                                </div>
+                                <div class="flex-1 pl-1 mr-16">
+                                    <div class="font-medium dark:text-white">
+                                        CTO
+                                    </div>
+                                    <div class="text-sm text-gray-600 dark:text-gray-200">
+                                        Boby PArk
+                                    </div>
+                                </div>
+                                <div class="text-xs text-gray-600 dark:text-gray-200">
+                                    6:00 AM
+                                </div>
+                                <button class="flex justify-end w-24 text-right">
+                                    <svg width="20" fill="currentColor" height="20" class="text-gray-500 hover:text-gray-800 dark:hover:text-white dark:text-gray-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
